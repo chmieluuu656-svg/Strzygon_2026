@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>PIN</title>
+</head>
+<body>
+
+    <h2>Podaj PIN</h2>
+
+    <input type="password" id="pin" placeholder="PIN">
+    <button onclick="sprawdzPin()">Zatwierdź</button>
+
+    <h1 id="wynik"></h1>
+
+    <script>
+        function sprawdzPin() {
+            const pin = document.getElementById("pin").value;
+            const wynik = document.getElementById("wynik");
+
+            if (pin === "652134") {
+                wynik.textContent = "wygrana";
+            } else {
+                wynik.textContent = "Błędny PIN";
+            }
+        }
+    </script>
+
+</body>
+</html>
